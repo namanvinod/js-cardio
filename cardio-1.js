@@ -18,7 +18,5 @@ function reverseStr_Reduce(str) {
         )
 }
 
-console.log(reverseStr_Reduce('  hello    '))
-
 exports.reverseStr = reverseStr
 exports.reverseStr_Reduce = reverseStr_Reduce
