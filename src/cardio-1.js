@@ -69,6 +69,10 @@ getCharSet_Reduce = (str) => {
         .join('')
 }
 
+convert_subStr_slice = (str) => {
+
+}
+
 convertCase_regex = (str) => {
     str = sanitizeString(str)
     if (isValidString(str)) {
@@ -100,13 +104,10 @@ convertCase_matchAll = (str) => {
 }
 
 convertCase_Array_Map = (str) => {
-    // console.log('Inpt', str, (str || '').trim().split(' '))
     str = sanitizeString(str)
     if (isValidString(str)) {
         let letterArr = [...str]
         return letterArr.map((letter, index, letterArr) => {
-            // console.log(word)
-            // let letterArr = word.split('')
             if (index === 0 || (letter !== ' ' && (index > 0 && letterArr[index - 1] === ' ')))
                 return letter.toUpperCase()
             else
